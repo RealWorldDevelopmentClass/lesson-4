@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Inserisci Username e Password e clicka su Signup!
+  form(name="signup", action="/signup", method="post")
+    input(type="text", name="user")
+    input(type="password", name="password")
+    input(type="submit", value="Signup!")
+

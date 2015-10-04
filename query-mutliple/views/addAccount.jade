@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  form(name="login", action="/addAccount", method="post")
+    input(type="text", name="user")
+    input(type="password", name="pass")
+    input(type="submit", value="Add Account")

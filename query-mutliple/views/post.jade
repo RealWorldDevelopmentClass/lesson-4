@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p You are posting as #{user.user}, there are #{nUsers} in total
+  form(name="post", action="/post", method="post")
+    textarea(name="text")
+    input(type="submit", value="Condividi")
+  ul
+  each val in posts
+    li
+      strong=val.user.user
+      |  says:&nbsp
+      =val.text

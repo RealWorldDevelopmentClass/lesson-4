@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Inserisci un nuovo post
+  form(name="writePost", action="/writePost", method="post")
+    textarea(type="text", name="text")
+    input(type="submit", value="Posta!")
+  ul
+    each post in posts
+      li
+        strong= post.user
+        |  says:&nbsp;
+        i= post.text
